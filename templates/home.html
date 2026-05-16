@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- 🔹 Hero Section -->
+<div class="hero text-center text-white d-flex align-items-center justify-content-center" 
+     style="height: 80vh; background: linear-gradient(to right, #4facfe, #00f2fe);">
+
+    <div>
+        <h1 class="display-4 fw-bold">Welcome to LMS 🚀</h1>
+        <p class="lead">Learn smarter, grow faster 📚</p>
+
+        <a href="/courses/" class="btn btn-light btn-lg mt-3">Get Started</a>
+    </div>
+
+</div>
+
+<!-- 🔹 Features Section -->
+<div class="container my-5">
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h4>📚 Courses</h4>
+                <p>Explore a wide range of courses</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h4>📝 Quizzes</h4>
+                <p>Test your knowledge easily</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h4>📊 Progress</h4>
+                <p>Track your learning progress</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Available Courses 📚</h2>
+
+    <!-- 🔍 Search -->
+    <form method="GET" class="mb-4">
+        <input type="text" name="q" class="form-control" placeholder="🔍 Search courses...">
+    </form>
+
+    <div class="row">
+        {% for course in courses %}
+        <div class="col-md-4">
+            <div class="card p-3 shadow mb-3">
+
+                <h4>
+                    <a href="/courses/{{ course.id }}/" style="text-decoration: none;">
+                        {{ course.title }}
+                    </a>
+                </h4>
+
+                <p>{{ course.description }}</p>
+
+                {% if user.is_authenticated %}
+                    <a href="/enroll/{{ course.id }}/" class="btn btn-success mt-2">Enroll</a>
+                {% else %}
+                    <a href="/login/" class="btn btn-warning mt-2">Login to Enroll</a>
+                {% endif %}
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

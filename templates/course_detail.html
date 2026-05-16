@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2>{{ course.title }}</h2>
+    <p>{{ course.description }}</p>
+
+    {% if user.is_authenticated %}
+        {% if is_enrolled %}
+            <button class="btn btn-secondary">Enrolled ✅</button>
+        {% else %}
+            <a href="/enroll/{{ course.id }}/" class="btn btn-success">Enroll</a>
+        {% endif %}
+    {% else %}
+        <a href="/login/" class="btn btn-warning">Login to Enroll</a>
+    {% endif %}
+
+    <br><br>
+    <a href="/courses/" class="btn btn-dark">Back</a>
+</div>
+
+{% endblock %}
