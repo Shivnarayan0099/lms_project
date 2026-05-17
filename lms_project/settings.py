@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-+6tvvbbti76v2y@*1qj*1)52l0ud!bia=&enzhr3=70owttq$t
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'lms-project-zwox.onrender.com'
+    'lms-project-zwox.onrender.com',
+    '.onrender.com'
 ]
 # Application definition
 
